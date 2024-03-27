@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <label>Enter how many processes are there:</label>
+        <input type="number" id="inp_size">
+        <button onclick="inputFields()">Submit</button>
+    </div>
+    
+    <div id="inp_table" style="display: none;">
+        <table id="inputTable">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="inputRows"></tbody>
+        </table>
+        <div>
+            <label for="tq">Enter Time Quantum:</label>
+            <input type="number" id="tq" placeholder="TQ">
+        </div>
+    </div>
+    
+    <button onclick="arrayInput()" style="display: none;" id="cal">Calculate</button>
+
+    <div id="FCFS"></div>
+
+    <div id="SJF"></div>
+
+    <div id="SRTF"></div>
+
+    <div id="RR"></div>
+
+    <div id="Priority"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
