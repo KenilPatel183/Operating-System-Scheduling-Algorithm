@@ -15,6 +15,27 @@ body {
     background-color: #f5f5f5;
     font-family: 'Open Sans', sans-serif;
 }
+.wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.head{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+.main{
+    position: relative;
+    margin: 70px 0;
+}
+.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
 
 a {
     text-decoration: none;
@@ -128,6 +149,7 @@ button:hover {
 .table-container {
     padding: 25px;
     border-bottom: 2px solid #8f8f8f;
+    padding-top: 75px;
 }
 
 .table-container table {
