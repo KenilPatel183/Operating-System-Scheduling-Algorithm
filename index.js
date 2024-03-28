@@ -530,6 +530,7 @@ function roundRobin() {
   }
 
   const mainDiv = printOutput(gantt3, count3, time3);
+  let parentDiv = document.getElementById("RR");
   parentDiv.appendChild(mainDiv);
 
   const readyQ = document.createElement("div");
