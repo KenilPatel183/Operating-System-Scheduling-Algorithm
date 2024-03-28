@@ -10,11 +10,9 @@ body{
 
 .FCFSOP{
     width: 80vw;
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     margin: 0px;
-    /* align-items: center; */
 }
 
 .gantt{
