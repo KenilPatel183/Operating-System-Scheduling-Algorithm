@@ -2,7 +2,7 @@ function printOutput(gantt0, count0, time0) {
     // Create a main div with class FCFSOP
     const mainDiv = document.createElement('div');
     
-    const label = document.createElement('h2');
+    const label = document.createElement('h3');
     label.innerText = 'Gantt Chart:'
     mainDiv.appendChild(label);
     
@@ -157,13 +157,10 @@ function firstComeFirstServe(){
     const mainDiv=printOutput(gantt0,count0,time0);
     let parentDiv = document.getElementById("FCFS");
 
-    const heading = document.createElement("h1"); 
-    heading.innerText="First Come First Served Scheduling";
-    parentDiv.appendChild(heading);
     parentDiv.appendChild(mainDiv);
 
     parentDiv.innerHTML+=`
-        <h2>Process Table:</h2>
+        <h3>Process Table:</h3>
         <table>
             <thead>
                 <tr>
@@ -258,13 +255,11 @@ function  sortestJobFirst(){
 
     const mainDiv=printOutput(gantt1,count1,time1);
     let parentDiv = document.getElementById("SJF");
-    const heading = document.createElement("h1"); 
-    heading.innerText="Sortest Job First Scheduling";
-    parentDiv.appendChild(heading);
+    
     parentDiv.appendChild(mainDiv);
 
     parentDiv.innerHTML+=`
-        <h2>Process Table:</h2>
+        <h3>Process Table:</h3>
         <table>
             <thead>
                 <tr>
@@ -365,13 +360,11 @@ function sortestRemainingTimeFirst(){
 
     const mainDiv=printOutput(gantt2,count2,time2);
     let parentDiv = document.getElementById("SRTF");
-    const heading = document.createElement("h1"); 
-    heading.innerText="Sortest Remaining Time First Scheduling";
-    parentDiv.appendChild(heading);
+    
     parentDiv.appendChild(mainDiv);
 
     parentDiv.innerHTML+=`
-        <h2>Process Table:</h2>
+        <h3>Process Table:</h3>
         <table>
             <thead>
                 <tr>
@@ -489,26 +482,22 @@ function roundRobin(){
 
     const mainDiv=printOutput(gantt3,count3,time3);
     let parentDiv = document.getElementById("RR");
-    const heading = document.createElement("h1"); 
-    heading.innerText="Round Robin Scheduling";
-    parentDiv.appendChild(heading);
+    
     parentDiv.appendChild(mainDiv);
 
     const readyQ = document.createElement("div");
-    // readyQ.classList.add('FCFSOP');
-    const label = document.createElement('h2');
+    readyQ.classList.add('FCFSOP');
+    const label = document.createElement('h3');
     label.innerText = "Ready Queue:";
     readyQ.appendChild(label);
     const div1 = document.createElement('div');
     div1.style.display = 'flex';
-    div1.style.maxWidth = '80vw';
+    div1.style.maxWidth = '80%';
     // Loop through the array and append each element inside the main div
     for (var i = 0; i < ready.length; i++) {
         const element = document.createElement('div');
-        element.innerText = RQ[i]; // Using innerText instead of textContent
-        //element.id = 'g_' + i; // Assigning unique ID
-        element.className = 'gantt'; // Assigning class name
-        //const duration = time0[i+1]-time0[i];
+        element.innerText = RQ[i];
+        element.className = 'gantt';
         element.style.width = ((1 * 100 / ready.length)) + '%'; // Setting width
         div1.appendChild(element);
     }
@@ -516,7 +505,7 @@ function roundRobin(){
     parentDiv.appendChild(readyQ);
 
     parentDiv.innerHTML+=`
-        <h2>Process Table:</h2>
+        <h3>Process Table:</h3>
         <table>
             <thead>
                 <tr>
@@ -620,13 +609,11 @@ function priorityWithPreemption(){
 
     const mainDiv=printOutput(gantt4,count4,time4);
     let parentDiv = document.getElementById("Priority");
-    const heading = document.createElement("h1"); 
-    heading.innerText="Priority With Pre-emption Scheduling";
-    parentDiv.appendChild(heading);
+    
     parentDiv.appendChild(mainDiv);
 
     parentDiv.innerHTML+=`
-        <h2>Process Table:</h2>
+        <h3>Process Table:</h3>
         <table>
             <thead>
                 <tr>
