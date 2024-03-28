@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OS Assignment</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <div>
-        <label>Enter how many processes are there:</label>
-        <input type="number" id="inp_size">
-        <button onclick="inputFields()">Submit</button>
-    </div>
-    
-    <div id="inp_table" style="display: none;">
-        <table id="inputTable">
-            <thead>
-                <tr>
-                    <th>Process</th>
-                    <th>Arrival Time</th>
-                    <th>Burst Time</th>
-                    <th>Priority</th>
-                </tr>
-            </thead>
-            <tbody id="inputRows"></tbody>
-        </table>
-        <div>
-            <label for="tq">Enter Time Quantum:</label>
-            <input type="number" id="tq" placeholder="TQ">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#FCFS">FCFS</a></li>
+                <li><a href="#SJF">SJF</a></li>
+                <li><a href="#SRTF">SRTF</a></li>
+                <li><a href="#RR">RR</a></li>
+                <li><a href="#Priority">Priority</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1>OS Assignment</h1>
+            </div>
+            <div class="button-container">
+                <label>Enter how many processes are there:</label>
+                <input type="number" id="inp_size">
+                <button onclick="inputFields()">Submit</button>
+            </div>
+            <div class="form-container" id="inp_table" style="display: none;">
+                <table id="inputTable">
+                    <thead>
+                        <tr>
+                            <th>Process</th>
+                            <th>Arrival Time</th>
+                            <th>Burst Time</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inputRows"></tbody>
+                </table>
+                <div id="inp_tq">
+                    <label for="tq">Enter Time Quantum:</label>
+                    <input type="number" id="tq" placeholder="TQ">
+                </div>
+            </div>
+            <button onclick="arrayInput()" style="display: none;" id="cal">Calculate</button>
+            <div class="table-container" id="FCFS">
+                <h2>First-Come, First-Served (FCFS)</h2>
+                <table>
+                    <!-- FCFS table content -->
+                </table>
+            </div>
+            <div class="table-container" id="SJF">
+                <h2>Shortest Job First (SJF)</h2>
+                <table>
+                    <!-- SJF table content -->
+                </table>
+            </div>
+            <div class="table-container" id="SRTF">
+                <h2>Shortest Remaining Time First (SRTF)</h2>
+                <table>
+                    <!-- SRTF table content -->
+                </table>
+            </div>
+            <div class="table-container" id="RR">
+                <h2>Round-Robin (RR)</h2>
+                <table>
+                    <!-- RR table content -->
+                </table>
+            </div>
+            <div class="table-container" id="Priority">
+                <h2>Priority Scheduling</h2>
+                <table>
+                    <!-- Priority table content -->
+                </table>
+            </div>
         </div>
-    </div>
-    
-    <button onclick="arrayInput()" style="display: none;" id="cal">Calculate</button>
+    </main>
 
-    <div id="FCFS"></div>
-
-    <div id="SJF"></div>
-
-    <div id="SRTF"></div>
-
-    <div id="RR"></div>
-
-    <div id="Priority"></div>
-
+    <footer>
+        <p>Created by Kenil Patel </p>
+    </footer>
     <script src="index.js"></script>
 </body>
+
 </html>
