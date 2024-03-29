@@ -28,10 +28,10 @@ body {
 }
 .main{
     position: relative;
-    margin: 70px 0;
+    margin-top: 70px;
 }
 .footer{
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     z-index: 1000;
