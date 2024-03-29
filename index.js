@@ -159,7 +159,7 @@ function firstComeFirstServe() {
   for (let i = 0; i < inp; i++) {
     tct0 += CT0[i][0];
     twt0 += WT0[i][0];
-    ttat0 = TAT0[i][0];
+    ttat0 += TAT0[i][0];
   }
   avgct0 = tct0 / inp;
   avgtat0 = ttat0 / inp;
@@ -270,7 +270,7 @@ function sortestJobFirst() {
   for (let i = 0; i < inp; i++) {
     tct1 += CT1[i][0];
     twt1 += WT1[i][0];
-    ttat1 = TAT1[i][0];
+    ttat1 += TAT1[i][0];
   }
   avgct1 = tct1 / inp;
   avgtat1 = ttat1 / inp;
@@ -387,7 +387,7 @@ function sortestRemainingTimeFirst() {
   for (let i = 0; i < inp; i++) {
     tct2 += CT2[i][0];
     twt2 += WT2[i][0];
-    ttat2 = TAT2[i][0];
+    ttat2 += TAT2[i][0];
   }
   avgct2 = tct2 / inp;
   avgtat2 = ttat2 / inp;
@@ -518,7 +518,7 @@ function roundRobin() {
   for (let i = 0; i < inp; i++) {
     tct3 += CT3[i][0];
     twt3 += WT3[i][0];
-    ttat3 = TAT3[i][0];
+    ttat3 += TAT3[i][0];
   }
   avgct3 = tct3 / inp;
   avgtat3 = ttat3 / inp;
@@ -661,7 +661,7 @@ function priorityWithPreemption() {
   for (let i = 0; i < inp; i++) {
     tct4 += CT4[i][0];
     twt4 += WT4[i][0];
-    ttat4 = TAT4[i][0];
+    ttat4 += TAT4[i][0];
   }
   avgct4 = tct4 / inp;
   avgtat4 = ttat4 / inp;
